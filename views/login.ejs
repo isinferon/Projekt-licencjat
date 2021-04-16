@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/styleLR.css" type="text/css">
+
+</head>
+
+<body>
+    <div class="welcome--box">
+      <div class="container">
+        <h1 class="text-center "><i class="fas fa-sign-in-alt"></i>  Zaloguj się</h1>
+        <%- include ("./partials/messages.ejs"); %>   
+        <form action="/users/login" method="POST">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Wpisz Email"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Hasło</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Wpisz hasło"
+            />
+          </div>
+          <a class="main--login--button">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <button type="submit" class="btn btn-primary btn-block">Zaloguj się</button>
+          </a>
+        </form>
+        <p class="lead mt-4">Nie posiadasz konta? 
+          <a class="a--normal"href="/users/register">
+             <strong>Stwórz konto!!!</strong>
+            </a>
+        </p>
+      </div>
+    </div>
+  </body>
+
+</html>

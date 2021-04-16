@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+    <script src="/assets/todo-list.js" ></script>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+
+</head>
+<nav>
+    <a href="/dashboard/bmi" class="nav--button">Twoje BMI</a>
+    <a href="/dashboard/todo" class="nav--button">To Do List</a>
+    <a href="/dashboard" class="nav--button">Strona główna</a>
+    <a href="" class="nav--button">......</a>
+    <a href="/users/logout" class="nav--button">Wyloguj się</a>
+
+</nav>
+
+<body>
+    <div class="container dashboard--container">
+        <div class="dashboard--box todo--box">
+            <form  method="POST" action="/todo">
+                <input type="text" name="item" placeholder="Dodaj nowy tekst">
+                <button type="submit"> Dodaj tekst</button>
+            </form>
+            <ul>
+                <% for(var i=0; i < todos.length; i++){  %>
+                    <li><%= todos[i].item %></li>
+                <% } %>
+
+            </ul>
+
+        </div>
+    </div>
+
+</body>
+
+
+</html>

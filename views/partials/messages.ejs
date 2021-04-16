@@ -1,0 +1,59 @@
+<% if(typeof errors != 'undefined') { %>
+    <% errors.forEach(function(error) { %> 
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <%= error.msg %>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+   <% }); %>
+<% } %>
+
+<% if(success_msg != '') { %>
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <%= success_msg %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+
+<% if(error_msg != '') { %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= error_msg %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+
+<% if(error != '') { %>
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= error %>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<% } %>
+
+<style>
+.alert {
+  position: relative;
+  padding: 0.25rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.15rem;
+}   
+.alert-warning {
+  color: white;
+  background-color:rgb(14, 14, 14);
+  position: relative;
+  text-align: center;
+  box-shadow: 0rem 0rem 0.6rem rgb(255, 0, 0,0.8);
+}
+
+.alert-success{
+  color: white;
+  background-color:rgb(14, 14, 14);
+  position: relative;
+  text-align: center;
+  box-shadow: 0rem 0rem 0.6rem rgb(57, 168, 23,0.8);
+
+}
+
+
+
+
+</style>

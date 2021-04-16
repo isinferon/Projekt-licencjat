@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+
+</head>
+<nav>
+  <a href="/dashboard/bmi" class="nav--button">Twoje BMI</a>
+  <a href="/dashboard/todo" class="nav--button">To Do List</a>
+  <a href="/dashboard" class="nav--button">Strona główna</a>
+  <a href="" class="nav--button">......</a>
+  <a href="/users/logout" class="nav--button">Wyloguj się</a>
+
+</nav>
+<body>
+  <div class="container bmi--container">
+    <div class="bmi--box ">
+      <form action="/dashboard/bmi" method="POST">
+        <div class="form-group">
+          <h2>
+            <% if(user.bmi > 0 ){ %>
+            Twoje BMI wynosi <%= user.bmi %>
+            <% } %>
+
+            <% if(user.bmi === 0){ %>
+
+              <% }else if(user.bmi < 18.5 ) { %>  
+            <style>
+              .niedowaga {
+                display: inline !important;
+              }
+            </style>
+
+            <% }else if(user.bmi > 18.5 && user.bmi <= 24.9 ) { %>
+            <style>
+              .prawidlowa {
+                display: inline !important;
+                color: rgb(57, 168, 23,0.8) !important;
+              }
+            </style>
+            <% }else if(user.bmi > 24.9 && user.bmi <= 29.9 ) { %>
+            <style>
+              .nadwaga {
+                display: inline !important;
+              }
+            </style>
+            <% }else if(user.bmi > 29.9 ) { %>
+              <style>
+                .otylosc {
+                  display: inline !important;
+                }
+              </style>
+              <% } %>
+
+          </h2>
+          <div class="bmi--check">
+            <div class="niedowaga">Niedowaga</div>
+            <div class="prawidlowa">Prawidlowe BMI</div>
+            <div class="nadwaga">Nadwaga</div>
+            <div class="otylosc">Otylosc</div>
+          </div>
+
+          <h2>BMI - wskaźnik masy ciała</h2>
+          <%- include ("./partials/messages.ejs"); %>
+          <label for="waga">Waga</label>
+          <input type="waga" id="waga" name="waga" class="form-control" placeholder="Wpisz wagę" />
+        </div>
+        <div class="form-group">
+          <label for="wzrost">Wzrost</label>
+          <input type="wzrost" id="wzrost" name="wzrost" class="form-control" placeholder="Podaj wzrost" />
+        </div>
+        <a class="oblicz--bmi--button">
+          <button type="submit" class="btn btn-primary btn-block">Oblicz</button>
+        </a>
+      </form>
+
+    </div>
+  </div>
+</body>
+
+
+</html>
