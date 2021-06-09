@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.icon').click(function () {
+                $('ul').toggleClass('show');
+                $('.container').toggleClass('hide');
+            })
+        })
+    </script>
+</head>
+<nav>
+    <ul>
+        <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+        <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+        <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+        <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+        <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+    </ul>
+    <label class="icon">
+        <i class="fas fa-bars"></i>
+    </label>
+</nav>
+
+<body>
+    <div class="container bmi--container">
+        <div class="bmi--box ">
+            <form action="/dashboard/start/cwiczenia/planTreningowy/nowyPlan" method="POST">
+                <div class="form-group">
+                    <% if(msg){ %>
+                    <h2 class="alert alert-warning alert-dismissible fade show"><%= msg %></h2>
+                    <% } %>
+                    <h2>Stwórz plan treningowy</h2>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="poniedzialek" value="Poniedziałek"
+                            class="form-control"> Poniedziałek
+                    </li>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="wtorek" value="Wtorek" class="form-control">
+                        Wtorek
+                    </li>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="sroda" value="Środa" class="form-control">
+                        Środa
+                    </li>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="czwartek" value="czwartek"
+                            class="form-control"> Czwartek
+                    </li>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="piatek" value="piatek" class="form-control">
+                        Piątek
+                    </li>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="sobota" value="sobota" class="form-control">
+                        Sobota
+                    </li>
+                    <li>
+                        <input style="width: auto;" type="checkbox" name="niedziela" value="niedziela"
+                            class="form-control"> Niedziela
+                    </li>
+
+
+
+
+                    <a class="oblicz--bmi--button">
+                        <button type="submit" class="btn btn-primary btn-block">Zapisz</button>
+                    </a>
+            </form>
+
+        </div>
+    </div>
+</body>

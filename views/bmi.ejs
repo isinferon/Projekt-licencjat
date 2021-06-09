@@ -1,34 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $('ul').toggleClass('show');
+                $('.container').toggleClass('hide');
+            }) 
+        })
+    </script>
 </head>
 <nav>
-  <a href="/dashboard/bmi" class="nav--button">Twoje BMI</a>
-  <a href="/dashboard/todo" class="nav--button">To Do List</a>
-  <a href="/dashboard" class="nav--button">Strona główna</a>
-  <a href="" class="nav--button">......</a>
-  <a href="/users/logout" class="nav--button">Wyloguj się</a>
-
+  <ul>
+      <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+      <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+      <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+      <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+      <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+  </ul>
+  <label class="icon">
+      <i class="fas fa-bars"></i>
+  </label>
 </nav>
+
 <body>
   <div class="container bmi--container">
     <div class="bmi--box ">
+      <a href="/dashboard/bmr" class="nav--button">BMR</a>
       <form action="/dashboard/bmi" method="POST">
         <div class="form-group">
           <h2>
-            <% if(user.bmi > 0 ){ %>
+            <% if(user.bmi){ %>
             Twoje BMI wynosi <%= user.bmi %>
             <% } %>
 
-            <% if(user.bmi === 0){ %>
-
-              <% }else if(user.bmi < 18.5 ) { %>  
+            <% if(user.bmi === null){ %>
+              <h2></h2>
+            <% }else if(user.bmi < 18.5 ) { %>
             <style>
               .niedowaga {
                 display: inline !important;
@@ -39,7 +54,7 @@
             <style>
               .prawidlowa {
                 display: inline !important;
-                color: rgb(57, 168, 23,0.8) !important;
+                color: rgb(57, 168, 23, 0.8) !important;
               }
             </style>
             <% }else if(user.bmi > 24.9 && user.bmi <= 29.9 ) { %>
@@ -49,12 +64,12 @@
               }
             </style>
             <% }else if(user.bmi > 29.9 ) { %>
-              <style>
-                .otylosc {
-                  display: inline !important;
-                }
-              </style>
-              <% } %>
+            <style>
+              .otylosc {
+                display: inline !important;
+              }
+            </style>
+            <% } %>
 
           </h2>
           <div class="bmi--check">

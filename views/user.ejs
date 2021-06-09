@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $('ul').toggleClass('show');
+                $('.container').toggleClass('hide');
+            }) 
+        })
+    </script>
+</head>
+<nav>
+  <ul>
+      <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+      <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+      <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+      <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+      <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+  </ul>
+  <label class="icon">
+      <i class="fas fa-bars"></i>
+  </label>
+</nav>
+
+<body>
+  <div class="container bmi--container">
+    <div class="profile--box">
+      <div class="link">
+        <a href="/dashboard/eUser" class="nav--button">Edytuj profil</a>
+        <a href="/dashboard/mail" class="nav--button">Wyślij maila</a>
+      </div>
+      <div class="form-group">
+
+        <h2>
+
+          <% if(!user.ramie){ %>
+          Obwód ramienia: Uzupełnij pole
+          <% } else { %>
+          Obwód ramienia: <%= user.ramie %>cm
+          <% } %>
+        </h2>
+        <h2>
+          <% if(!user.udo){ %>
+          Obwód uda: Uzupełnij pole
+          <% } else { %>
+          Obwód uda: <%= user.udo %>cm
+          <% } %>
+        </h2>
+        <h2>
+          <% if(!user.talia){ %>
+          Obwód talii: Uzupełnij pole
+          <% } else { %>
+          Obwód talii: <%= user.talia %>cm
+          <% } %>
+        </h2>
+        <h2>
+          <% if(!user.klatka){ %>
+          Obwód klatki: Uzupełnij pole
+          <% } else { %>
+          Obwód klatki: <%= user.klatka %>cm
+          <% } %>
+        </h2>
+        <h2>
+          <% if(!user.waga){ %>
+          Waga: Uzupełnij pole
+          <% } else { %>
+          Waga: <%= user.waga %>kg
+          <% } %>
+        </h2>
+        <% if(user.bmr === null){ %>
+        <h2>
+          Uzupełnij<strong style="color: red;"> BMR </strong>by obliczyć swoje zapotrzebowanie kaloryczne
+        </h2>
+        <% } else { %>
+
+        <h2 style=" padding: 1vh; box-shadow:inset 0 0 2vh #7700ff;  "> Zapotrzebowanie kaloryczne:</h2>
+        <h2> Twój cel kaloryczny wynosi: <%= user.bmr %> </h2>
+
+
+        <% } %>
+
+
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>

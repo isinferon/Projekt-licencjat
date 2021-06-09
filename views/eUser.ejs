@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.icon').click(function(){
+                $('ul').toggleClass('show');
+                $('.container').toggleClass('hide');
+            }) 
+        })
+    </script>
+</head>
+<nav>
+  <ul>
+      <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+      <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+      <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+      <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+      <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+  </ul>
+  <label class="icon">
+      <i class="fas fa-bars"></i>
+  </label>
+</nav>
+
+<body>
+  <div class="container bmi--container">
+    <div class="bmi--box ">
+      <form action="/dashboard/eUser" method="POST">
+        <div class="form-group">
+
+          <h2>Wymiary użytkownika
+            <h3>
+              UWAGA! Brać wymiary należy z najszerszego wyznaczonego punktu
+            </h3>
+          </h2>
+          <label for="ramie">Ramie</label>
+          <input type="text" id="ramie" name="ramie" class="form-control" placeholder="Wpisz obwód ramienia" />
+        </div>
+        <div class="form-group">
+          <label for="udo">Udo</label>
+          <input type="text" id="udo" name="udo" class="form-control" placeholder="Podaj obwód uda" />
+        </div>
+        <div class="form-group">
+          <label for="talia">Talia</label>
+          <input type="text" id="talia" name="talia" class="form-control" placeholder="Podaj obwód talii" />
+        </div>
+        <div class="form-group">
+          <label for="klatka">Klatka piersiowa</label>
+          <input type="text" id="klatka" name="klatka" class="form-control"
+            placeholder="Podaj obwód klatki piersiowej" />
+        </div>
+        <div class="form-group">
+          <label for="masa">Waga</label>
+          <input type="text" id="masa" name="masa" class="form-control" placeholder="Podaj swoją wagę" />
+        </div>
+        
+
+        <a class="oblicz--bmi--button">
+          <button type="submit" class="btn btn-primary btn-block">Zapisz</button>
+        </a>
+      </form>
+
+    </div>
+  </div>
+</body>
+
+
+</html>

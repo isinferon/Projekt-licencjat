@@ -16,7 +16,7 @@
     align-items: center;
     min-height: 100vh;
     position: relative; 
-   background-image: url('./images/imgRL.png');
+   background-image: url('./images/imgTlo/imgRL.png');
    background-size: cover;
 }  
 

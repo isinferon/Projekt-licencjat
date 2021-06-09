@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.icon').click(function () {
+        $('ul').toggleClass('show');
+        $('.container').toggleClass('hide');
+      })
+    })
+  </script>
+</head>
+<nav>
+  <ul>
+    <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+    <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+    <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+    <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+    <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+  </ul>
+  <label class="icon">
+    <i class="fas fa-bars"></i>
+  </label>
+</nav>
+
+<body>
+  <div class="container bmi--container">
+    <div class="profile--box">
+      <% if(msg){ %>
+      <h2 class="alert alert-success alert-dismissible fade show"><%= msg %></h2>
+      <% } %>
+      <div class="link">
+        <a href="/dashboard/start/cwiczenia/planTreningowy/nowyPlan" class="nav--button">Stwórz plan treningowy</a>
+      </div>
+      <% if(user.trening){ %> 
+      <% for(var i=0; i < user.trening.length; i++) { %>
+        <% if( i % 10 === 0 ){ %> 
+        <h2> <%= user.trening[i] %> </h2>
+        <% } else if( user.trening[i] === null ){ %> 
+        <% } else { %> 
+          <li><%= user.trening[i] %> </li>
+        <% } %> 
+      <% } %> 
+      <% } %>
+      
+
+
+
+    </div>
+  </div>
+  </div>
+</body>
+
+
+</html>

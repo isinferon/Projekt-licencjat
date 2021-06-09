@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.icon').click(function(){
+                    $('ul').toggleClass('show');
+                    $('.container').toggleClass('hide');
+                }) 
+            })
+        </script>
+    </head>
+<nav>
+    <ul>
+        <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+        <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+        <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+        <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+        <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+    </ul>
+    <label class="icon">
+        <i class="fas fa-bars"></i>
+    </label>
+</nav>
+
+<body>
+
+    <section class="gallery">
+        <div class="pagination">
+            <button class="prev">Prev</button>
+            <button disabled class="page">Page <span class="page-num"></span></button>
+            <button class="next">Next</button>
+        </div>
+        <div class="pagination--container">
+            <div class="title">
+                <h1>Ćwiczenia</h1>
+                <div class="link">
+                    <a href="/dashboard/start/cwiczenia/planTreningowy" class="nav--button">Plan treningowy</a>
+                  </div>
+            </div>
+            <div class="gallery--items">
+                <% for(var i=0; i < cwiczenia.length; i++){  %>
+
+                <% for(var j=0; j < 4; j++){  %>
+                <div class="item">
+                    <img src='<%= cwiczenia[i][j] %>' alt="gallery">
+                    <div class="caption">
+
+                        <div class="jnone">
+                            <%=  j++ %>
+                        </div>
+                        <h2><%= cwiczenia[i][j] %> </h2>
+                        <div class="jnone">
+                            <%=  j++ %>
+                        </div>
+                        <h3><%= cwiczenia[i][j] %></h3>
+
+                        <div class="jnone">
+                            <%=  j++ %>
+                        </div>
+                        <p>
+                            <%= cwiczenia[i][j] %>
+                        </p>
+                    </div>
+                </div>
+                <% } %>
+                <% } %>
+
+
+
+            </div>
+        </div>
+        <div class="pagination">
+            <button class="prev">Prev</button>
+            <button class="page">Page <span class="page-num"></span></button>
+            <button class="next">Next</button>
+
+        </div>
+    </section>
+    <script src="/assets/js/script.js"></script>
+
+</body>
+
+</html>

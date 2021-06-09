@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.icon').click(function(){
+                    $('ul').toggleClass('show');
+                    $('.container').toggleClass('hide');
+                }) 
+            })
+        </script>
+    </head>
+<nav>
+    <ul>
+        <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+        <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+        <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+        <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+        <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+    </ul>
+    <label class="icon">
+        <i class="fas fa-bars"></i>
+    </label>
+</nav>
+
+<body>
+    <div class="container bmi--container">
+        <div class="bmi--box ">
+            <a href="/dashboard/bmi" class="nav--button">BMI</a>
+            <form action="/dashboard/bmr" method="POST">
+                <div class="form-group">
+
+                    <h2>BMR - minimalne dzienne zapotrzebowanie kcal</h2>
+
+                    <label for="waga">Waga</label>
+                    <input type="text" id="waga" name="waga" class="form-control" placeholder="Wpisz wagę" />
+                </div>
+                <div class="form-group">
+                    <label for="wzrost">Wzrost</label>
+                    <input type="text" id="wzrost" name="wzrost" class="form-control" placeholder="Podaj wzrost" />
+                </div>
+                <div class="form-group">
+                    <label for="wiek">Wiek</label>
+                    <input type="text" id="wiek" name="wiek" class="form-control" placeholder="Podaj wzrost" />
+                </div>
+                <div class="form-group">
+                    <label for="plec">Płeć</label>
+                    <select id="plec" name="plec" class="form-control">
+                        <option style="display:none"> Wybierz płeć </option>
+                        <option value="mezczyzna">Mężczyzna</option>
+                        <option value="kobieta">Kobieta</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="aktywnosc">Aktywność fizyczna</label>
+                    <select id="plec" name="aktywnosc" class="form-control">
+                        <option style="display:none"> Wybierz rodzaj aktywności fizycznej </option>
+                        <option value="mala">Bardzo mała</option>
+                        <option value="umiarkowana">Umiarkowana</option>
+                        <option value="duza">Duża</option>
+                        <option value="bardzoDuza">Bardzo duża</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="cel">Cel diety</label>
+                    <select id="plec" name="cel" class="form-control">
+                        <option style="display:none"> Wybierz co chcesz osiagnąć </option>
+                        <option value="schudnac">Schudnąć</option>
+                        <option value="utrzymacWage">Utrzymać wagę</option>
+                        <option value="nabracMasy">Nabrac masy</option>
+                    </select>
+                </div>
+                <a class="oblicz--bmi--button">
+                    <button type="submit" class="btn btn-primary btn-block">Oblicz</button>
+                </a>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+
+</html>

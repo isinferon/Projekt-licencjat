@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.icon').click(function () {
+                $('ul').toggleClass('show');
+                $('.container').toggleClass('hide');
+            })
+        })
+    </script>
+</head>
+<nav>
+    <ul>
+        <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
+        <li><a href="/dashboard/todo" class="nav--button">To Do List</a></li>
+        <li><a href="/dashboard/user" class="nav--button">Profil Użytkownika</a></li>
+        <li><a href="/dashboard/start" class="nav--button">Start</a></li>
+        <li><a href="/users/logout" class="nav--button">Wyloguj się</a></li>
+    </ul>
+    <label class="icon">
+        <i class="fas fa-bars"></i>
+    </label>
+</nav>
+
+<body>
+    <div class="container bmi--container">
+        <div class="profile--box">
+            <form action="/dashboard/start/dieta/nowaDieta" method="POST">
+                <div class="form-group">
+                    <% if(!user.bmr){ %>
+                    <h2>Aby stworzyć dietę najpierw oblicz swoje BMR!!!</h2>
+                    <a href="/dashboard/bmr" class="nav--button">Oblicz BMR, Kliknij TU!</a>
+                    <% } else { %>
+                        <% if(msg){ %>
+                        <h2 class="alert alert-warning alert-dismissible fade show"><%= msg %></h2>
+                        <% } %>
+
+                    <h2>BMR - <%= user.bmr %>kcal</h2>
+                </div>
+                <div class="form-group">
+                    <label for="liczbaP">Liczba posiłków</label>
+                    <select id="plec" name="liczbaP" class="form-control">
+                        <option style="display:none"> Wybierz liczbę posiłków </option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="choroba">Czy posiadasz chorobę/uczulenie przez która </label>
+                    <label>możesz miec problemy zdrowotne podczas diety</label>
+                    <select id="plec" name="choroba" class="form-control">
+                        <option style="display:none"> Wybierz opcje </option>
+                        <option value="tak">TAK</option>
+                        <option value="nie">NIE</option>
+                    </select>
+                </div>
+                <a class="oblicz--bmi--button">
+                    <button type="submit" class="btn btn-primary btn-block">Oblicz</button>
+                </a>
+            </form>
+            <% } %>
+
+
+
+        </div>
+    </div>
+    </div>
+</body>
+
+
+</html>
