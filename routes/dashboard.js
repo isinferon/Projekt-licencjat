@@ -3,12 +3,10 @@ const router = express.Router();
 const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const {ensureAuthenticated} = require ('../config/auth')
-// const Bodyparser = require('body-parser');
 
 //User model
 const User = require('../models/User');
 const { db } = require('../models/User');
-const bodyParser = require('body-parser');
 
 //BMI page
 router.get('/bmi', ensureAuthenticated,  (req, res) => 
@@ -48,7 +46,6 @@ router.get('/bmi', ensureAuthenticated,  (req, res) =>
 })
 
 var data = [{item: 'get milk'}, {item: 'walk dog'}, {item: 'kick'}];
-// var urlEncodedParser = bodyParser.urlencoded({extended: false});
 
 //TODO page
 // ensureAuthenticated
@@ -68,7 +65,6 @@ router.delete('/todo/:item',  (req, res) => {
         return todo.item.replace(/ /g, '-') !== req.params.item;
     })
     res.render('todo', {todos: data});
-    
 
     });
     
