@@ -36,7 +36,7 @@
             <form action="/dashboard/start/dieta/nowaDieta" method="POST">
                 <div class="form-group">
                     <% if(!user.bmr){ %>
-                    <h2>Aby stworzyć dietę najpierw oblicz swoje BMR!!!</h2>
+                    <h2 class="alert alert-warning alert-dismissible fade show">Aby stworzyć dietę najpierw oblicz swoje BMR!!!</h2>
                     <a href="/dashboard/bmr" class="nav--button">Oblicz BMR, Kliknij TU!</a>
                     <% } else { %>
                         <% if(msg){ %>

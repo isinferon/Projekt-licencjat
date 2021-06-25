@@ -319,7 +319,7 @@ router.post("/start/cwiczenia/planTreningowy/nowyPlan", async (req, res) => {
 
   if (dni.length === 7 || dni.length === 0) {
     res.render("nowyPlan", {
-      msg: "Trening musi zawierać od 1 do maksymalnie 6 dni trenujących",
+      msg: "Trening musi zawierać od 1 do maksymalnie 5 dni trenujących",
       user: req.user,
     });
   } else {
@@ -542,11 +542,6 @@ router.get("/start/dieta/nowaDieta", ensureAuthenticated, (req, res) =>
   })
 );
 
-// 0,1 - sniadanie
-// 2,3 = drugie snidanie
-// 4,5 = obiad
-// 6,7 = przekaska
-// 8,9 = kolacja
 
 router.post("/start/dieta/nowaDieta", async (req, res) => {
   const user = await User.findById(req.user._id);
