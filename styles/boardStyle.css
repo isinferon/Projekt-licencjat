@@ -133,12 +133,13 @@ nav li:hover{
 .dashboard--exresice{
     background-image: url('./images/imgTlo/combine_images3.png');
     background-position-x: 50%;
+    pointer-events: none; 
     
 }
 .dashboard--diet{
     background-image: url('./images/imgTlo/combine_images2.png');
     background-position-x: 50%;
-    
+    pointer-events: none; 
 }
 
 input{
@@ -199,6 +200,7 @@ input{
     list-style-type: none;
     padding: 0;
     margin: 0;
+    
 }
 
 .todo--box ul li{
@@ -215,6 +217,11 @@ input{
 
 .todo--box ul li a:hover{
     box-shadow: 0 0 2vh red; 
+}
+.todo--box{
+    overflow-y: scroll ;
+    height: 500px;
+    
 }
 
 
@@ -379,7 +386,7 @@ img{
 .gallery .gallery--items .caption{
     /* border: 0.1rem solid #2196f3; */
     margin: 5%;
-    width: 60%;
+    width: 90%;
 }
 .gallery .gallery--items .caption h2{
     text-align: center;

@@ -144,127 +144,127 @@ router.get("/start", ensureAuthenticated, (req, res) =>
 // START/CWICZENIA PAGE/
 const cwiczenia = [
   [
-    "/assets/images/cwiczenia/klatkaPic1.jpg",
+    "Wyciskanie sztangi na ławce poziomej",
     "Partia mięśniowa: Klatka piersiowa",
     "Mięśnie zaangażowane: Cała grupa mięśni klatki piersiowej, mięśnie trójgłowe ramion",
     "Nogi ugięte pod kątem prostym i przylegają do podłoża, łokcie prowadzimy w trakcie całego ruchu pod kątem 45 stopni od tułowia oraz trzymamy mostek pokazany na zdjeciu obok, który zapobiega kontuzji.",
   ],
   [
-    "/assets/images/cwiczenia/nogiPic1.jpg",
+    "Dzień dobry",
     "Partia mięśniowa: Plecy, nogi",
     "Mięśnie zaangażowane: Mięśnie pośladkowe i prostowniki grzbietu",
     "Stajemy w rozkroku nieco większym niż szerokość barków. Klatka piersiowa wypchnięta ku przodowi, łopatki ściągnięte do siebie. Nogi lekko ugięte w kolanach przez cały czas trwania ćwiczenia. Z takiej pozycji wykonujemy skłon do pozycji zbliżonej do poziomego ułożenia tułowia względem podłogi, następnie wracamy do początkowej pozycji.",
   ],
   [
-    "/assets/images/cwiczenia/brzuchPic1.jpg",
+    "Deska(plank)",
     "Partia mięśniowa: Brzuch",
     "Mięśnie zaangażowane: Mieśnie głębokie brzucha",
     "Podpieramy się na palcach i łokciach, skupiamy się na spinaniu brzucha oraz pośladków i przyjemujemy poze widoczną na obrazku obok. Staramy się utrzymać w tej pozycji jak najdłużej.",
   ],
   [
-    "/assets/images/cwiczenia/barkiPic1.jpg",
+    "Szrugsy",
     "Partia mięśniowa: Plecy",
     "Mięśnie zaangażowane: Mięśnie czworoboczne grzbietu(kapturowe)",
     "Głowa prosto, ramiona ściągnięte do tyłu, klatka wypięta do przodu. Chwytamy sztangielki i unosimy barki możliwie jak najwyżej ściągając je jednocześnie do tyłu. W najwyższym punkcie wstrzymujemy ruch przez chwilę",
   ],
   [
-    "/assets/images/cwiczenia/plecyPic1.jpg",
+    "Martwy ciąg",
     "Partia mięśniowa: Plecy, nogi",
     "Mięśnie zaangażowane: Prostowniki grzbietu, mięsnie najszersze grzbietu, pośladkowe, dwugłowe ud",
     "Stajemy przodem do sztangi, w rozkroku na szerokość barków. Nogi lekko ugięte w kolanach, sztangę chwytamy nachwytem, nieco szerzej niż barki. Klatka wypchnięta ku przodowi, tułów wyprostowany. Ćwiczenie polega na unoszeniu sztangi w górę poprzez prostowanie nóg i wyprost tułowia. Ruch kończymy przy pełnym wyproście tułowia. Nie wolno również dopuszczać do tzw. ”kociego grzbietu”. Powrót do pozycji wyjściowej zaczynamy od lekkiego ugięcia nóg w kolanach, a następnie pochylamy tułów robiąc skłon",
   ],
   [
-    "/assets/images//cwiczenia/ramionaPic1.jpg",
+    "Biceps w pozycji pionowej",
     "Partia mięśniowa: Ramiona",
     "Mięśnie zaangażowane: Dwugłowe ramion, mięsnie przedramion",
     "Polega na stopniowym obracaniu dłoni w trakcie wykonywania ćwiczenia. W pozycji wyjściowej dłonie zwrócone są ku sobie palcami, a w miarę uginania ramion obracają się tak, by w końcowym momencie ruchu małe palce były wyżej od kciuków. Ruch można wykonywać na przemian-raz jedna ręka, raz druga, obiema rękami jednocześnie.",
   ],
   [
-    "/assets/images/cwiczenia/plecyPic2.jpg",
+    "Wyprosty tułowia",
     "Partia mięśniowa: Plecy",
     "Mięśnie zaangażowane: Prostowniki grzbietu",
     "Kładziemy się twarzą do dołu na ławce, tak by biodra spoczywały na niej, a nogi były zaparte o specjalną poprzeczkę. Generalnie im głębszy skłon tym większe rozciągnięcie mięsni grzbietu, ale i większe zaangażowanie mięśni dwugłowych ud i pośladkowych. Ruch powinien być płynny, bez „szarpania” i zamaszystych ruchów, które powodują ominięcie najtrudniejszego punktu ćwiczenia.",
   ],
   [
-    "/assets/images/cwiczenia/barkiPic2.jpg",
+    "Unoszenie sztangielek bokiem",
     "Partia mięśniowa: Barki",
     "Mięśnie zaangażowane: Środkowe aktony mięśni naramiennych",
     "W pozycji wyjściowej tułów lekko pochylony, ręce ze sztangielkami nieco ugięte w łokciach, opuszczone w dół. Sztangielki unosimy do linii barków i bez zatrzymania opuszczamy powoli w dół. Ćwiczenie to można również wykonywać jednorącz sztangielką.",
   ],
   [
-    "/assets/images/cwiczenia/plecyPic3.jpg",
+    "Wiosłowanie sztangi między nogami",
     "Partia mięśniowa: Plecy",
     "Mięśnie zaangażowane: Najszersze grzbietu",
     "Stajemy okrakiem nad gryfem sztangi i chwytamy drążek. Nogi lekko ugięte w kolanach. W takiej pozycji podciągamy sztangę do brzucha i opuszczamy cieżar powoli. W zależności od kąta, pod jakim chcemy zaatakować mięśnie używamy w tym ćwiczeniu różnych drążków.",
   ],
   [
-    "/assets/images/cwiczenia/klatkaPic2.jpg",
+    "Przenoszenie hantli nad głową",
     "Partia mięśniowa: Klatka piersiowa",
     "Mięśnie zaangażowane: Cała grupa mięśni piersiowych, mięśnie najszersze grzbietu",
     "Kładziemy się w poprzek ławki poziomej w ten sposób, by do jej powierzchni przylegała jedynie część pleców w okolicy łopatek i karku. Chwytamy sztangielkę pod talerzami. Sztangielkę opuszczamy do tyłu w dół do momentu maksymalnego wychylenia, w jakim możemy kontrolować ciężar.Dla lepszego zaangażowania mięśni zębatych można przy opuszczaniu sztangielki w tył jednocześnie obniżyć biodra.",
   ],
   [
-    "/assets/images/cwiczenia/nogiPic2.jpg",
+    "Hipthrusty",
     "Partia mięśniowa: Nogi",
     "Mięśnie zaangażowane: Mięśnie pośladkowe",
     "Siadamy w poprzek lawki poziomej, sztange bądź hantel kładziemy na biodra i unosimy sie do góry w taki sposób aby jedynie łopatki przylegały do ławki i w kolanach bylo 90stopni. Gdy jesteśmy w stabilnej pozycji opuszczamy pośladki a następnie unosimy i jednocześnie spinamy mięśnie pośladkowe przy początkowej pozycji.",
   ],
   [
-    "/assets/images/cwiczenia/plecyPic4.jpg",
+    "Wiosłowanie",
     "Partia mięśniowa: Plecy",
     "Mięśnie zaangażowane: Najszersze grzbietu, podgrzebieniowe",
     "Stajemy nad sztangą w rozkroku na szerokość barków, pochylamy tułów do pozycji prawie równoległej do podłoża, nogi lekko ugięte w kolanach. Sztangę chwytamy na szerokość nieco większą od barków i podciągamy ją do brzucha.",
   ],
   [
-    "/assets/images/cwiczenia/brzuchPic2.jpg",
+    "Kółko w pozycji klęczącej",
     "Partia mięśniowa: Brzuch",
     "Mięśnie zaangażowane: Mięśnie brzucha proste i skośne",
     "Pozycje zaczynami od przejścia na kolana. Spinamy brzuch i powoli odjeżdżamy kołkiem jak najdalej do momentu aż będziemy minimalnie nad podłożem. Nastepnie korzystając z ramion oraz mięsni brzucha przyciągami kółko do siebie, trzeba pamietać aby plecy były w równej pozycji",
   ],
   [
-    "/assets/images/cwiczenia/ramionaPic2.jpg",
+    "Pomki na poręczach",
     "Partia mięśniowa: Ramiona",
     "Mięśnie zaangażowane: Mieśnie trójgłowe ramion",
     "Chwytamy poręcze chwytem neutralnym, ręce wyprostowane, klatka piersiowa wypchnięta do przodu. Opuszczanie i unoszenie tułowia odbywa się poprzez uginanie rąk w stawach łokciowych. Przez cały czas trwania ćwiczenia łokcie powinny znajdować się jak najbliżej tułowia.",
   ],
   [
-    "/assets/images/cwiczenia/plecyPic5.jpg",
+    "Wiosłowanie hantlą jednorącz",
     "Partia mięśniowa: Plecy",
     "Mięśnie zaangażowane: Mięśnie najszersze grzbietu",
     "Wolną ręką opieramy się o coś stabilnego. Tułów w pozycji prawie równoległej do podłogi. W drugą rękę chwytamy sztangielkę. Chwyt przez cały czas trwania ćwiczenia równoległy, łokieć pracuje wzdłuż tułowia,pracują mocniej górne i środkowe części mięsni najszerszych ",
   ],
   [
-    "/assets/images/cwiczenia/nogiPic3.jpg",
+    "Przysiad na jednej nodze",
     "Partia mięśniowa: Nogi",
     "Mięśnie zaangażowane: Mięśnie czworogłowe ud, mieśnie pośladkowe",
     "W ręce trzymając obciążenie kładziemy stope  na podwyższenie które jest za nami. Używając tylko nogi która ma kontakt z podłożem robimy przysiad na jednej nodze do uzyskania 90 stopni w kolanie a następnie unosimy sie do góry. Podczas ruchu należy spiąć brzuch oraz pośladki. ",
   ],
   [
-    "/assets/images/cwiczenia/plecyPic6.jpg",
+    "Przyciąganie drążka",
     "Partia mięśniowa: Plecy",
     "Mięśnie zaangażowane: Mięśnie najszersze grzbietu, podgrzebieniowe",
     "Chwytamy drążek prosty nachwytem i przyciągamy ją do klatki. Łopatki ściągamy do siebie, jednocześnie łokcie przywodząc do tyłu. Przy przyciąganiu do klatki tułów nieco odchylony do tyłu. W dolnym położeniu przytrzymujemy drążek na chwilę dla lepszego napięcia mięsni. ",
   ],
   [
-    "/assets/images/cwiczenia/barkiPic3.jpg",
+    "Przyciąganie liny na bramie",
     "Partia mięśniowa: Barki",
     "Mięśnie zaangażowane: Tylnia część mięśni naramiennych",
     "Łapiemy nachwytem sznury, postawa wyprostowana, spięty brzuch. Przy przyciąganiu łapatki sciągamy do siebie a łokcie wędruja na boki. Ruch powininen być na wysokości twarzy",
   ],
   [
-    "/assets/images/cwiczenia/ramionaPic3.jpg",
+    "Uginanie ramion na wyciągu górnym",
     "Partia mięśniowa: Ramiona",
     "Mięśnie zaangażowane: Wszystkie mięśnie trójgłowych ramion",
     "Chwytamy rączkę nachwytem na szerokość około 10-20cm. Lekko pochylamy się w przód i naciskamy rączkę wyciągu w dół. Ramiona przyciśnięte do tułowia. Ruch wykonują tylko przedramiona. Ramiona prostujemy do końca-dla lepszego napięcia mięśni. Nie unosimy łokci, gdy rączka wyciągu jest w górnym położeniu, spowodowałoby to zanik napięcia w tricepsach.",
   ],
   [
-    "/assets/images/cwiczenia/klatkaPic3.jpg",
+    "Rozpętki na bramie",
     "Partia mięśniowa: Klatka piersiowa",
     "Mięśnie zaangażowane: Mięsień piersiowy większy, przednie aktony mięśni naramiennych, piersiowy mniejszy",
     "Gdy złapiemy rączki, wychodzimy krok do przodu przed wyciąg i w trakcie ruchu lekko uginamy je w łokciach.  W końcowej fazie ruch można zatrzymać na chwilę w celu lepszego napięcia mięśni. Ważne jest wykonywanie pełnego zakresu ruchu, im większy zakres wykonanego ruchu, tym pełniejszy ogólny rozwój mięśnia.",
   ],
   [
-    "/assets/images/cwiczenia/nogiPic4.jpg",
+    "Przysiady",
     "Partia mięśniowa: Nogi",
     "Mięśnie zaangażowane: Mieśnie czworogłowem mieśnie pośladkowe ",
     "Wchodzimy pod sztangę stojącą na stojakach, barki opuszczone i odwiedzione w tył, gryf sztangi dotyka naszego karku na mięśniach czworobocznych grzbietu. Dłonie rozstawione w wygodnej i stabilnej pozycji na gryfie. Dolny odcinek grzbietu wypchnięty do przodu, rozstaw stóp w zależności od naszego poczucia stabilności. Rozpoczynamy ruch w dół, przez cały czas plecy wygięte w jednakowy sposób, pracują tylko nogi do momentu rozciagniecia czworogłowych.",
@@ -488,32 +488,22 @@ router.post("/start/cwiczenia/planTreningowy/nowyPlan", async (req, res) => {
 //Start/wiedza PAGE
 const wiedza = [
   [
-    "/assets/images/wiedza/deficyt1.jpg",
-    "/assets/images/wiedza/deficyt2.jpg",
     "TEMATYKA: Co naprawdę wpływa na spalanie tłuszczu ",
     "Poziom tkanki tłuszczowej jest zależny od tego ile spożywamy w ciągu dnia. Osoby z nadmierną jej ilością mają nadwagę bądź otyłość. Warto wspomnieć, że nie ma żadnych produktów dzięki którymi spalimy tłuszcz. Poziom tkanki tłuszczowej możemy obniżyc dzięki deficytowy kalorycznemu. Jeżeli przeciętna osoba  potrzbuje 2300kcal do utrzymania poziomy tkanki to spożywając 2000kcal mamy 300 kcal na deficycie kalorycznym. Jest to najważnmiejsza zasada, która trzeba się kierować przy odchudzaniu.  Głównym problemem związanym z dietą na bardzo niskim poziomie tkanki tłuszczowej jest to, że gdy stajemy się szczuplejsi, zwiększa się głód i zmniejsza się nasz wydatek energetyczny. Tak więc nasz deficyt staje się coraz mniejszy, a wyniki zaczynają zwalniać. ⁣Ważnym elementem jest przyjmowanie odpowiedniej ilości białka aby nasze ciało nie pobierało energii z białka tylko z tłuszczy. Dodając trening otrzymamy bodziec to utrzymania masy mieśniowej więc energia będzie czerpana z komórek tłuszczowych.",
   ],
   [
-    "/assets/images/wiedza/6pm.jpg",
-    "/assets/images/wiedza/6pm2.jpg",
     "Tematyka: Wieczorne jedzenie węglowodanów",
     "Jest to mit przez, który dużo ludzi ogranicza jedzenie po określonej godzinie co wpływa negatywnie na samopoczucie a wcale tak nie musi być. Ograniczenie jakiegokolwiek jedzenia po godzinie np. 18 nie sprawi redukcji tkanki tłuszczowej tylko sprawi to  deficyt kaloryczny. Gdy ostatni posiłek jest wliczony w dzienny limit kaloryczny to żaden pojedynczy makroskładnik odżywczy nie bedzie miał wplywu na sklad ciala, bez względy na czas spożycia. Wieczorny posiłek pozytywnie wpływa na samopoczucie i sen. Węglowodany mają wiele zalet, regulują hormony jak leptyna czy seratonina, które hamują uczucie głodu. Tak rygorystyczna dieta najprawdopodobniej nie będzie trwała długo ponieważ chodzenie spać głodnemu źle wpływa na nasz stan psychiczny.",
   ],
   [
-    "/assets/images/wiedza/damage1.jpg",
-    "/assets/images/wiedza/damage2.jpg",
     "Tematyka: Uszkodzenia mięśni = przyrost ???",
     "Trening siłowy wydaje się powodować większe zniszczenie mięśni a także hipertrofię. Tylko faktem jest, że wielkość uszkodzenia nie ma wpływu z jakimkolwiek przyrostem. Nawet jeżeli jest odpowiednia ilość makroskładników nie ma rzeczywistego przyrostu. Uszkodzenia mięśni poprzez długotrwały trening nie ma negatywnego odniesienia do zwiększenia masy mięśniowej lecz czasami  mięśnie potrzebują bodźca, który powstanie przy zrobieniu treningu z większym obciążeniem. Niezależnie czy trening będzie siłowy czy też długotrwały spowoduje przyrost mięśni a odczucie zniszczenia, które możemy odczuwać podczas treningu nie ma żadnego wpływu.",
   ],
   [
-    "/assets/images/wiedza/breathe1.jpg",
-    "/assets/images/wiedza/breathe2.jpg",
     "Tematyka: Jak skutecznie oddychać przy podnoszeniu dużych cieżarów",
     "Podnoszenie cieżarów szczególnie tych o dużym obciążeniu wymaga od nas dużej stabilizacji, może to nam zapewnić umiejętność prawidłowego oddychania. Głównym celem tego jest stworzenie ciśnienia poprzez wzięcie głebokiego oddechu, tym sposobem naciskamy na przeponę, która kurczy się i wytwarza ciśnienie w jamie brzusznej oraz mięśniach skośnych i lędźwiowych. Można to porównać do puszki z ciśnieniem, im większe tym cięzej jest zniekształcić jej kształt. Aby to zrobić wystarczy wziąć wystarczającą ilość tlenu aby brzuch pod wpływem ciśnienia powiększał się a następnie spiąć mięsnie brzucha, które powoduja zmiejszenie objętości brzucha co sprawia wzrost ciśnienia czyli większą stabilizacje i napięcie. Ważnym elementem w wykonaniu tego jest wstrzymanie oddechu podczas całego ruchu i zrobieniu wydechu po ukończeniu powtórzenia. ",
   ],
   [
-    "/assets/images/wiedza/deficit1.jpg",
-    "/assets/images/wiedza/deficit2.jpg",
     "Tematyka: Poprawna ilośc deficytu kalorczynego",
     "Jest to temat bardzo ciężki ponieważ każda dieta z deficytem powinna być przystosowana do osoby. Warto mieć jednak wiedzę na temat jak deficyt wpływa na utrate wagi. W celu utraty 1 kg tkanki tłuszczowe przyjeło się, że należy spalić 7000kcal. Zakładając deficyt ~500kcal dziennie, musimy poświęcić 14 dni aby z naszego organizmu znikneło 1 kg tłuszczu. Deficyt przy którym dostarczami poniżej 75% naszego dziennego spożycia kcal jest bardzo rygorystyczny lecz powoduję najszybsze efekty pod względem utraty wagi. Taką dietę należy pilnować pod okiem dietetyka oraz powinna być używana w krótkim okresie czasu bo może negatywnie wpłynąć na nasz organizm a co najważniejsze na złe samopoczucie. Dieta, której przedział kaloryczny jest między 75% a 85% jest najbardziej optymalna i średnio pozwala nam spalic przy siedzącym trybie życia około 500kcal i w miesiącu ubędzie nam ~2kg. Można ją stosować długoterminowo. Ostatnim przedział mieści się w okolicach około 90%. Jest to deficyt kalorczyny, który jest przystosowany do długoterminowej diety. Efekty pojawiają się stopniowo oraz bardzo powoli ale są. Mieszanie kaloryki może negatywnie wpłynąc na prace organizmu co sprawi dziwne wahania wagi. Zaleca się utrzymanie kaloryki na tym samym poziomie przez pewien okres czasu a następnie go zwiększyć bądź zmiejszyć w zależnosci do naszych potrzeb.",
   ],
@@ -791,8 +781,8 @@ router.post("/start/dieta/nowaDieta", async (req, res) => {
 });
 
 //User page
-router.get("/User", ensureAuthenticated, (req, res) =>
-  res.render("User", {
+router.get("/user", ensureAuthenticated, (req, res) =>
+  res.render("user", {
     user: req.user,
   })
 );

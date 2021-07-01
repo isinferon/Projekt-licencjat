@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
-        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-        <script  src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script>
-            $(document).ready(function(){
-                $('.icon').click(function(){
-                    $('ul').toggleClass('show');
-                    $('.container').toggleClass('hide');
-                }) 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/boardStyle.css" type="text/css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.icon').click(function () {
+                $('ul').toggleClass('show');
+                $('.container').toggleClass('hide');
             })
-        </script>
-    </head>
+        })
+    </script>
+</head>
 <nav>
     <ul>
         <li><a href="/dashboard/bmi" class="nav--button">BMI / BMR</a></li>
@@ -47,19 +47,11 @@
 
                 <% for(var j=0; j < 4; j++){  %>
                 <div class="wiedza--item">
-                    <div class="wiedza--img">
-                        
-                        <img src='<%= wiedza[i][j] %>' alt="gallery">
-                        <div class="jnone">
-                            <%=  j++ %>
-                        </div>
-                        <img  src='<%= wiedza[i][j] %>' alt="gallery"></img>
-                    </div>
 
                     <div class="wiedza--caption">
                         <div class="jnone">
-                            <%=  j++ %>
-                        </div>  
+                            
+                        </div>
                         <h2><%= wiedza[i][j] %> </h2>
 
 
